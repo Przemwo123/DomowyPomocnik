@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace ProgramForms
+namespace DomowyPomocnik
 {
     public partial class Menu : Form
     {
@@ -14,7 +14,7 @@ namespace ProgramForms
             InitializeComponent();
         }
 
-        private void form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
             if (currentButton == null)
                 OpenChildForm(new Forms.Home(), btnHome);
@@ -22,7 +22,7 @@ namespace ProgramForms
 
         private Color SelectThemeColor(String _nameBtn)
         {
-            string color = ThemeColors.colorList(_nameBtn);
+            string color = ThemeColors.ColorList(_nameBtn);
             return ColorTranslator.FromHtml(color);
         }
 
@@ -30,7 +30,7 @@ namespace ProgramForms
         {
             if (btn != null)
             {
-                if(currentButton != (Button)btn)
+                if (currentButton != (Button)btn)
                 {
                     DisableButton();
                     currentButton = (Button)btn;
@@ -41,7 +41,7 @@ namespace ProgramForms
                     panelTitleBar.BackColor = color;
                     panelTitleText.Text = currentButton.Text;
                     iconTitle.Image = currentButton.Image;
-                    currentButton.Padding = new Padding(5,0,0,0);
+                    currentButton.Padding = new Padding(5, 0, 0, 0);
                     leftBorderBtn.Location = new Point(0, currentButton.Location.Y);
                     leftBorderBtn.BackColor = color;
                 }
@@ -82,38 +82,38 @@ namespace ProgramForms
             childForm.Show();
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
+        private void BtnHome_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.Home(), sender);
         }
 
-        private void btnCal_Click(object sender, EventArgs e)
+        private void BtnCal_Click(object sender, EventArgs e)
         {
 
-            OpenChildForm(new Forms.IleDoKoncaMiesiaca(), sender);
+            OpenChildForm(new Forms.Do10go(), sender);
         }
 
-        private void btnSto_Click(object sender, EventArgs e)
+        private void BtnSto_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.Stoper(), sender);
         }
 
-        private void btnWea_Click(object sender, EventArgs e)
+        private void BtnWea_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.Pogoda(), sender);
         }
 
-        private void btnDB_Click(object sender, EventArgs e)
+        private void BtnDB_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.BazaDanych(), sender);
         }
 
-        private void btnNot_Click(object sender, EventArgs e)
+        private void BtnNot_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.Notatnik(), sender);
         }
 
-        private void btnInf_Click(object sender, EventArgs e)
+        private void BtnInf_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.Informacje(), sender);
         }

@@ -1,4 +1,4 @@
-﻿namespace ProgramForms.Forms
+﻿namespace DomowyPomocnik.Forms
 {
     partial class Notatnik
     {
@@ -64,7 +64,7 @@
             this.btnSaveFile.TabIndex = 5;
             this.btnSaveFile.Text = "Zapisz plik";
             this.btnSaveFile.UseVisualStyleBackColor = true;
-            this.btnSaveFile.Click += new System.EventHandler(this.btnSaveFile_Click);
+            this.btnSaveFile.Click += new System.EventHandler(this.BtnSaveFile_Click);
             // 
             // btnOpenFile
             // 
@@ -79,7 +79,7 @@
             this.btnOpenFile.TabIndex = 4;
             this.btnOpenFile.Text = "Otwórz plik";
             this.btnOpenFile.UseVisualStyleBackColor = true;
-            this.btnOpenFile.Click += new System.EventHandler(this.btnOpenFile_Click);
+            this.btnOpenFile.Click += new System.EventHandler(this.BtnOpenFile_Click);
             // 
             // btnNewFile
             // 
@@ -94,7 +94,7 @@
             this.btnNewFile.TabIndex = 3;
             this.btnNewFile.Text = "Nowy plik";
             this.btnNewFile.UseVisualStyleBackColor = true;
-            this.btnNewFile.Click += new System.EventHandler(this.btnNewFile_Click);
+            this.btnNewFile.Click += new System.EventHandler(this.BtnNewFile_Click);
             // 
             // richTextBox1
             // 
@@ -106,7 +106,7 @@
             this.richTextBox1.Size = new System.Drawing.Size(635, 335);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            this.richTextBox1.TextChanged += new System.EventHandler(this.RichTextBox1_TextChanged);
             // 
             // panel2
             // 

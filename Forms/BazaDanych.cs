@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace ProgramForms.Forms
+namespace DomowyPomocnik.Forms
 {
     public partial class BazaDanych : Form
     {
@@ -91,7 +91,8 @@ namespace ProgramForms.Forms
                         try
                         {
                             BeginInvoke(new InvokeDelegate(ConnectionError));
-                        }catch { }
+                        }
+                        catch { }
                     }
                 }
                 catch (Exception ex)
@@ -103,7 +104,7 @@ namespace ProgramForms.Forms
                         BeginInvoke(new InvokeDelegate(ConnectionError));
                     }
                     catch { }
-                    
+
                 }
                 Thread.Sleep(10);
             }
@@ -138,7 +139,7 @@ namespace ProgramForms.Forms
                 status = StatusConection.notConection;
                 DisConnection();
             }
-            
+
             dataGridView1.DataSource = categoryTable.DefaultView;
         }
 

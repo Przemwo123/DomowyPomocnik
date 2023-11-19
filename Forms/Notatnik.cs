@@ -1,14 +1,16 @@
 ﻿using System;
-using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms;
 
-namespace ProgramForms.Forms
+namespace DomowyPomocnik.Forms
 {
     public partial class Notatnik : Form
     {
         private static string stringText = "";
         private static string strFileName = "";
         private static string fileTitle = "*.txt";
+        private readonly OpenFileDialog openFileDialog = new OpenFileDialog();
+        private readonly SaveFileDialog saveFileDialog = new SaveFileDialog();
 
         public Notatnik()
         {
@@ -20,12 +22,12 @@ namespace ProgramForms.Forms
             richTextBox1.Text = stringText;
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        private void RichTextBox1_TextChanged(object sender, EventArgs e)
         {
             stringText = richTextBox1.Text;
         }
 
-        private void btnNewFile_Click(object sender, EventArgs e)
+        private void BtnNewFile_Click(object sender, EventArgs e)
         {
             if (stringText != "")
             {
@@ -33,7 +35,7 @@ namespace ProgramForms.Forms
 
                 if (dr == DialogResult.Yes)
                 {
-                    saveVile();
+                    SaveVile();
                 }
                 else if (dr == DialogResult.No)
                 {
@@ -45,15 +47,14 @@ namespace ProgramForms.Forms
             }
         }
 
-        private void btnOpenFile_Click(object sender, EventArgs e)
+        private void BtnOpenFile_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Title = "Otwórz plik";
             openFileDialog.Filter = "Dokumenty tekstowe|*txt|Wszystkie pliki|*.*";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 strFileName = openFileDialog.FileName;
-                fileTitle = findFileTitle(strFileName);
+                fileTitle = FindFileTitle(strFileName);
                 //stringText = File.ReadAllText(strFileName);
                 StreamReader read = new StreamReader(File.OpenRead(strFileName));
                 stringText = read.ReadToEnd();
@@ -62,14 +63,13 @@ namespace ProgramForms.Forms
             }
         }
 
-        private void btnSaveFile_Click(object sender, EventArgs e)
+        private void BtnSaveFile_Click(object sender, EventArgs e)
         {
-            saveVile();
+            SaveVile();
         }
 
-        private void saveVile()
+        private void SaveVile()
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Title = "Zapisywanie jako";
             saveFileDialog.Filter = "Dokumenty tekstowe|*txt|Wszystkie pliki|*.*";
             saveFileDialog.FileName = fileTitle;
@@ -84,7 +84,7 @@ namespace ProgramForms.Forms
             }
         }
 
-        private string findFileTitle(string s)
+        private string FindFileTitle(string s)
         {
             string[] words = s.Split('\\');
             string temp = "";

@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace ProgramForms.Forms
+namespace DomowyPomocnik.Forms
 {
     public partial class Stoper : Form
     {
@@ -49,7 +49,8 @@ namespace ProgramForms.Forms
                 timeCount.Start();
                 stopwatch.Restart();
                 StoperOn();
-            }else if(status == StoperStatus.stoperOn)
+            }
+            else if (status == StoperStatus.stoperOn)
             {
                 stopwatch.Stop();
                 status = StoperStatus.stoperPause;
@@ -113,7 +114,7 @@ namespace ProgramForms.Forms
         {
             while (Application.AllowQuit)
             {
-                if(status == StoperStatus.stoperOn)
+                if (status == StoperStatus.stoperOn)
                     TimeUpdate();
                 Thread.Sleep(10);
             }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace ProgramForms
+namespace DomowyPomocnik
 {
     static class Program
     {

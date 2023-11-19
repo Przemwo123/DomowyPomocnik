@@ -1,9 +1,9 @@
-﻿namespace ProgramForms
+﻿namespace DomowyPomocnik
 {
     public class ThemeColors
     {
 
-    public static string colorList(string nameBtn)
+    public static string ColorList(string nameBtn)
         {
             switch (nameBtn)
             {

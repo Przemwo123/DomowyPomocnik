@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace ProgramForms.Forms
+namespace DomowyPomocnik.Forms
 {
     public partial class Home : Form
     {

@@ -1,4 +1,4 @@
-﻿namespace ProgramForms.Forms
+﻿namespace DomowyPomocnik.Forms
 {
     partial class Stoper
     {
