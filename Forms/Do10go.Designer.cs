@@ -52,7 +52,6 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.AutoSize = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(101)))));
             this.flowLayoutPanel1.Controls.Add(this.label1);
             this.flowLayoutPanel1.Controls.Add(this.textInfoDay);
@@ -72,26 +71,25 @@
             this.label1.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.label1.Size = new System.Drawing.Size(131, 28);
+            this.label1.Size = new System.Drawing.Size(137, 28);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Dzisiaj mamy";
+            this.label1.Text = "Dzisiaj mamy:";
             // 
             // textInfoDay
             // 
             this.textInfoDay.AutoSize = true;
             this.textInfoDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textInfoDay.ForeColor = System.Drawing.Color.White;
-            this.textInfoDay.Location = new System.Drawing.Point(134, 0);
-            this.textInfoDay.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.textInfoDay.Location = new System.Drawing.Point(140, 0);
+            this.textInfoDay.Margin = new System.Windows.Forms.Padding(0);
             this.textInfoDay.Name = "textInfoDay";
             this.textInfoDay.Padding = new System.Windows.Forms.Padding(0, 4, 0, 0);
-            this.textInfoDay.Size = new System.Drawing.Size(168, 28);
+            this.textInfoDay.Size = new System.Drawing.Size(162, 28);
             this.textInfoDay.TabIndex = 2;
-            this.textInfoDay.Text = "01 stycznia 2023,";
+            this.textInfoDay.Text = "01 stycznia 2023";
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.AutoSize = true;
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(149)))), ((int)(((byte)(101)))));
             this.flowLayoutPanel2.Controls.Add(this.label2);
             this.flowLayoutPanel2.Controls.Add(this.textHowManyDays);
@@ -285,7 +283,6 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.myMoney)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

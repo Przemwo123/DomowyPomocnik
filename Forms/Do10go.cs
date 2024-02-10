@@ -21,8 +21,18 @@ namespace DomowyPomocnik.Forms
             DateTime dat1 = DateTime.Now;
             int day = dat1.Day;
             int month = DateTime.DaysInMonth(dat1.Year, dat1.Month);
-            textInfoDay.Text = dat1.ToLongDateString() + ",";
-            int temp = ((month + 11) - day);
+            textInfoDay.Text = dat1.ToLongDateString();
+            int temp = 0;
+
+            if (day < 10)
+            {
+                temp = 10-day;
+            }
+            else
+            {
+                temp = ((month + 10) - day);
+            }
+
             if (temp > 1)
             {
                 textHowManyDays.Text = temp + " dni!";

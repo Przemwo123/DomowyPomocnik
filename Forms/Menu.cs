@@ -73,13 +73,13 @@ namespace DomowyPomocnik
             }
             ActivateButton(btnSender);
             activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            this.panelDesktop.Controls.Add(childForm);
-            this.panelDesktop.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
+            activeForm.TopLevel = false;
+            activeForm.FormBorderStyle = FormBorderStyle.None;
+            activeForm.Dock = DockStyle.Fill;
+            this.panelDesktop.Controls.Add(activeForm);
+            this.panelDesktop.Tag = activeForm;
+            activeForm.BringToFront();
+            activeForm.Show();
         }
 
         private void BtnHome_Click(object sender, EventArgs e)
